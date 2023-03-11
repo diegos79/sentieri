@@ -1,5 +1,8 @@
 ---
-dataCreazione: 14-02-2023
+layout: page
+title: Home
+id: home
+permalink: /
 ---
 
 # Provincia di Latina
