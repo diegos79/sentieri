@@ -5,57 +5,29 @@ id: home
 permalink: /
 ---
 
-# Provincia di Latina
+# Welcome! 🌱
 
-#### [[Sentiero Parco Gianola e Monte Scauri]]
+<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
+  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
+</p>
 
----
+This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
-# Provincia di Benevento
+The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
 
-#### [[Sentiero Forre di Lavello]]
+<strong>Recently updated notes</strong>
 
----
+<ul>
+  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+  {% for note in recent_notes | limit: 5 %}
+    <li>
+      {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ note.url }}">{{ note.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
-
-# Provincia di Salerno
-#### [[Sentiero Da Sant'Agata sui due golfi a l'Isca]]
-
-#### [[Sentiero Da Sorrento a Nerano]]
-
-#### [[Sentiero degli Dei]]
-
-#### [[Sentiero delle 13 chiese]]
-
-#### [[Sentiero dei limoni]]
-
-#### [[Sentiero di Furore - Volpe pescatrice]]
-
----
-# Provincia di Caserta
-
-#### [[Sentiero Anello di Roccamonfina]]
-
----
-
-# Provincia di Napoli
-
-#### [[Sentiero Monte Nuovo]]
-
-#### [[Sentiero Monte Gauro]]
-
-#### [[Sentiero Bomerano - Tre Calli - Capo Muro]]
-
-#### [[Sentiero dei monaci Camaldoli]]
-
----
-
-# Fonti
-[CAI Monti Lattari](https://www.caimontilattari.it/sentieri/)
-
-
-
----
-
-#Geografia 
-#Geografia/Escursioni
+<style>
+  .wrapper {
+    max-width: 46em;
+  }
+</style>
